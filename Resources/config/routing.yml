@@ -1,0 +1,7 @@
+themes_homepage:
+    path:     /
+    defaults: { _controller: ThemesBundle:Default:index }
+themes_changebg:
+    path:     /ChangeBackground
+    defaults: { _controller: ThemesBundle:Default:changebg }
+
