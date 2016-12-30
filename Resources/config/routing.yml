@@ -4,4 +4,7 @@ themes_homepage:
 themes_changebg:
     path:     /ChangeBackground
     defaults: { _controller: ThemesBundle:Default:changebg }
+themes_changetheme:
+    path:     /ChangeTheme
+    defaults: { _controller: ThemesBundle:Default:changetheme }
 

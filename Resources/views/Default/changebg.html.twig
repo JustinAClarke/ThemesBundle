@@ -1,25 +1,62 @@
 <html>
 <head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<h4>Current Theme: {{ currTheme }} </h4>
-<table>
-<tr><th>Theme Title:</th><th></th></tr>
-{% for theme in availThemes %}
-{% if theme == "." or theme == ".." %}
-{% else %}
-<tr>
-<td>{{theme}}</td><td><a href="?newTheme={{theme}}">change</a></td>
-</tr>
+<div class="container">
+<h2>Change Background </h2>
+
+{% if not debug == false %}
+<div class="alert alert-info">
+<h4>Debug:</h4>
+{{ debug |raw('html') }}
+</div>
 {% endif %}
-{% endfor %}
+
+{% if not error == false %}
+<div class="alert alert-warning">
+<h4>Errors:</h4>
+{{ error |raw('html') }}
+</div>
+{% endif %}
+
+{% if not success == false %}
+<div class="alert alert-success">
+<h4>Success:</h4>
+{{ success |raw('html') }}
+</div>
+{% endif %}
+
+<table>
+<form method="POST" enctype="multipart/form-data">
+<tr><th>Current background:</th><th>New Background</th></tr>
+<tr>
+<td><img id="oldbg" src="/bundles/themes/background.jpg"></td>
+<td>
+<input name="newbg" id="newbg" type=file>
+<br>
+<input name=submit type=submit value="Change Background">
+<br>
+<input name="default" type=submit value="Change to Default Background">
+</td>
+</tr>
+</form>
 </table>
 
-
+</div>
 </body>
 
-{%include 'ThemesBundle:Default:footer.html.twig'  %}
-
+{#%include 'ThemesBundle:Default:footer.html.twig'  %#}
+<style>
+#oldbg{width:250px;height:auto;}
+</style>
 </html>
 
