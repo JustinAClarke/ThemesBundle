@@ -1,2 +1,2 @@
 <?php
-$currentTheme="blue";
+$currentTheme="default";
