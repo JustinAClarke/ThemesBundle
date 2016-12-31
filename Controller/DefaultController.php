@@ -55,8 +55,9 @@ class DefaultController extends Controller
 
 	if(isset($_POST["submit"])) {
 	$debug=print_r($_FILES,true);
-	$target_dir = "uploads/";
-	$target_file = $target_dir . basename($_FILES["newbg"]["name"]);
+//var_dump($_FILES);
+//	$target_dir = "uploads/";
+//	$target_file = $target_dir . basename($_FILES["newbg"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
