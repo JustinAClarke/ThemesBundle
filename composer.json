@@ -1,5 +1,5 @@
 {
-    "name":        "JustinFuhrmeister-Clarke/ThemesBundle",
+    "name":        "justinfuhrmeister-clarke/themesundle",
     "type":        "symfony-bundle",
     "description": "This bundle lets you change the themes, and body background of specified twig templates",
     "keywords":    ["themes", "symfony", "bundle", "twig"],
