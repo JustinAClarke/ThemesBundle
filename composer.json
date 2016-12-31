@@ -1,0 +1,30 @@
+{
+    "name":        "ThemesBundle",
+    "type":        "symfony-bundle",
+    "description": "This bundle lets you change the themes, and body background of specified twig templates",
+    "keywords":    ["themes", "symfony", "bundle", "twig"],
+    "homepage":    "http://github.com/JustinFuhrmeister-Clarke/ThemesBundle",
+    "license":     "GPL-3.0+",
+
+    "authors": [
+        {
+            "name": "Justin Fuhrmeister-Clarke",
+            "homepage": "http://github.com/JustinFuhrmeister-Clarke"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/symfony": "3.2.*"
+    },
+
+    "minimum-stability": "dev",
+
+    "autoload": {
+        "psr-0": {
+            "ThemesBundle": ""
+        }
+    },
+
+    "target-dir": "ThemesBundle"
+}
